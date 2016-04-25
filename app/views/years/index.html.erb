@@ -1,0 +1,7 @@
+<h2>Выберете год:</h2>
+<ul>
+  <% @years.each do |year| %>
+      <li><%= link_to year.value_year, year_months_path(year.value_year) %></li>
+  <% end %>
+</ul>
+<%= link_to 'Добавить год', new_year_path %>

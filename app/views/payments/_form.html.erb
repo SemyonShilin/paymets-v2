@@ -1,0 +1,19 @@
+<table>
+  <%= form_for [@month, @month.build_payment] do |f| %>
+      <tr>
+        <td><%= f.label 'Сумма платежа' %></td>
+        <td><%= f.text_field :payment %></td>
+      </tr>
+      <tr>
+        <td><%= f.label 'Сумма платежа идущего в долг' %></td>
+        <td><%= f.text_field :other_payment %></td>
+      </tr>
+      <tr>
+        <td><%= f.label 'Описание платежа идушего в долг' %></td>
+        <td><%= f.text_field :description %></td>
+      </tr>
+      <tr>
+        <td colspan="2"><%= f.submit 'Добавить платеж' %></td>
+      </tr>
+  <% end %>
+</table>

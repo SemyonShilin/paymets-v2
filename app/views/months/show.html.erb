@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <td><%= @month.name_month %></td>
+    <td><%= @payment.payment %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="2"><%= @payment.other_payment %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="2"><%= @payment.description %></td>
+  </tr>
+</table>
+
+<%= link_to 'Выбор года', years_path %>

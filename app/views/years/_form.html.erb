@@ -1,0 +1,6 @@
+<div>
+  <%= form_for @year, url: years_path do |f| %>
+      <%= f.text_field :value_year %>
+      <%= f.submit 'Добавить год' %>
+  <% end %>
+</div>

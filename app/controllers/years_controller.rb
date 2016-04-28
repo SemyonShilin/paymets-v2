@@ -1,10 +1,12 @@
 class YearsController < ApplicationController
   def new
     @year = Year.new
+    #@month = @year.months.build
   end
 
   def create
     @year = Year.create(year_params)
+    #@month = @year.months.build(year_params)
     if @year.errors.empty?
       redirect_to years_path
     else

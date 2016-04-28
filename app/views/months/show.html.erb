@@ -1,15 +1,15 @@
 <table>
   <tr>
-    <td><%= @month.name_month %></td>
-    <td><%= @payment.payment %></td>
+    <td><%= @month.name_month %>:</td>
+    <td>Сумма: <%= @payment.payment %></td>
   </tr>
   <tr>
     <td></td>
-    <td colspan="2"><%= @payment.other_payment %></td>
+    <td colspan="2">Прочие расходы: <%= @payment.other_payment %></td>
   </tr>
   <tr>
     <td></td>
-    <td colspan="2"><%= @payment.description %></td>
+    <td colspan="2">Описание: <%= @payment.description %></td>
   </tr>
 </table>
 

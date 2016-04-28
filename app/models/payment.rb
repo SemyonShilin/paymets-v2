@@ -1,6 +1,6 @@
 class Payment < ActiveRecord::Base
   belongs_to :month
-  
+
   validates :payment, presence: true
   validates :payment, numericality: {greater_than_or_equal_to: 0.01,
                                      message: 'Сумма платеж не может быть отрицательным'}

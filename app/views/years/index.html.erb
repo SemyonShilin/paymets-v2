@@ -1,7 +1,17 @@
-<h2>Выберете год:</h2>
-<ul>
+<table cellspacing="10">
+  <tr>
+    <td colspan="2">Выберете год:</td>
+  </tr>
   <% @years.each do |year| %>
-      <li><%= link_to year.value_year, year_months_path(year.value_year) %></li>
-  <% end %>
-</ul>
+  <tr>
+    <td>
+      <%= link_to year.value_year, year_months_path(year.value_year) %>
+    </td>
+    <td>
+      <%= button_to 'Показать платежи за год', year_payments_path(year.value_year), method: :get %>
+    </td>
+    <% end %>
+  </tr>
+</table>
+
 <%= link_to 'Добавить год', new_year_path %>

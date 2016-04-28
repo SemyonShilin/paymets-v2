@@ -7,9 +7,7 @@ class MonthsController < ApplicationController
   def show
     @month = Month.find(params[:id])
     @payment = @month.payment
+    @year = @month.years.build
   end
 
-  def get_month_id
-    @month.id
-  end
 end

@@ -27,12 +27,15 @@ Rails.application.routes.draw do
   #   end
 
   resources :years , shallow: true do
-    resources :months, shallow: true
+    resources :months, shallow: true, except: [:create, :update, :destroy, :new, :edit]
+    resources :payments, only: [:index]
   end
 
-  resources :months, shallow: true do
+  resources :months, shallow: true, except: [:create, :update, :destroy, :edit] do
     resources :payments
   end
+
+
 
   # Example resource route with sub-resources:
   #   resources :products do

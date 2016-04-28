@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160423182752) do
+ActiveRecord::Schema.define(version: 20160428123242) do
 
   create_table "months", force: :cascade do |t|
     t.string   "name_month", null: false
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20160423182752) do
     t.integer  "month_id"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
+    t.integer  "year"
+    t.decimal  "debit"
   end
 
   add_index "payments", ["month_id"], name: "index_payments_on_month_id"

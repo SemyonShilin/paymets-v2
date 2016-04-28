@@ -1,0 +1,23 @@
+<table cellspacing="10">
+  <tr>
+    <th>Сумма платежа</th>
+    <th>Сумма из долга</th>
+    <th>Описание</th>
+    <th>Долг</th>
+    <th>Месяц</th>
+  </tr>
+  <% @payments.each do |payment| %>
+    <tr>
+      <td><%= payment.payment %></td>
+      <td><%= payment.other_payment %></td>
+      <td><%= payment.description %></td>
+      <td><%= payment.debit %></td>
+      <td><%= payment.month.name_month %></td>
+    </tr>
+  <% end %>
+  <tr>
+    <td colspan="4"><%= Payment.sum(:debit) %></td>
+  </tr>
+</table>
+
+<%= button_to 'На главную', years_path, method: :get %>

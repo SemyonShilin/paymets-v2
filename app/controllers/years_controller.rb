@@ -1,4 +1,10 @@
 class YearsController < ApplicationController
+  http_basic_authenticate_with name: 'olga', password: 't42ks31'
+
+  def index
+    @years = Year.all
+  end
+
   def new
     @year = Year.new
     #@month = @year.months.build
@@ -12,10 +18,6 @@ class YearsController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def index
-    @years = Year.all
   end
 
   private

@@ -1,4 +1,10 @@
 class PaymentsController < ApplicationController
+  http_basic_authenticate_with name: 'olga', password: 't42ks31'
+
+  def index
+    @payments = Payment.where(year: params[:year_id])
+  end
+
   def new
     @month = Month.find(params[:month_id])
     @payment = @month.build_payment
@@ -14,10 +20,6 @@ class PaymentsController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def index
-    @payments = Payment.where(year: params[:year_id])
   end
 
   private

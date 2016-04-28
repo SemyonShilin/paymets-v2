@@ -1,19 +1,19 @@
-<% if @month.errors.any? %>
-    <div>
-      <h2>
-        <%= pluralize(@payment.errors.count, 'error') %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @payment.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-<% end %>
 
 <table>
   <%= form_for [@month, @month.build_payment] do |f| %>
+      <% if @month.errors.any? %>
+          <div>
+            <h2>
+              <%= pluralize(@payment.errors.count, 'error') %> prohibited
+              this article from being saved:
+            </h2>
+            <ul>
+              <% @payment.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
       <tr>
         <td><%= f.label 'Сумма платежа' %></td>
         <td><%= f.text_field :payment %></td>

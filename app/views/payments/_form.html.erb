@@ -1,7 +1,6 @@
-
 <table>
-  <%= form_for [@month, @month.build_payment] do |f| %>
-      <% if @month.errors.any? %>
+  <%= form_for [@month, @payment] do |f| %>
+      <% if @payment.errors.any? %>
           <div>
             <h2>
               <%= pluralize(@payment.errors.count, 'error') %> prohibited
@@ -14,6 +13,7 @@
             </ul>
           </div>
       <% end %>
+
       <tr>
         <td><%= f.label 'Сумма платежа' %></td>
         <td><%= f.text_field :payment %></td>

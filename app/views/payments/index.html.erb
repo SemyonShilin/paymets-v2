@@ -16,8 +16,9 @@
     </tr>
   <% end %>
   <tr>
-    <td colspan="4"><%= Payment.sum(:debit) %></td>
+    <td colspan="3">Сумма:</td>
+    <td colspan="2"><%= Payment.sum(:debit) %></td>
   </tr>
 </table>
 
-<%= button_to 'На главную', years_path, method: :get %>
+<%= button_to 'На главную', root_path, method: :get %>

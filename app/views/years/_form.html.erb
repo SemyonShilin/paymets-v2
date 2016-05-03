@@ -1,19 +1,5 @@
 <div>
   <%= form_for @year, url: years_path do |f| %>
-      <% if @year.errors.any? %>
-          <div>
-            <h2>
-              <%= pluralize(@year.errors.count, 'error') %> prohibited
-              this article from being saved:
-            </h2>
-            <ul>
-              <% @year.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-              <% end %>
-            </ul>
-          </div>
-      <% end %>
-
       <%= f.text_field :value_year %>
       <%= f.submit 'Добавить год' %>
   <% end %>

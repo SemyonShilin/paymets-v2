@@ -14,8 +14,9 @@ class YearsController < ApplicationController
     @year = Year.create(year_params)
     #@month = @year.months.build(year_params)
     if @year.errors.empty?
-      redirect_to years_path
+      redirect_to root_path
     else
+      flash.now[:error] = 'Не могу добавить год'
       render 'new'
     end
   end

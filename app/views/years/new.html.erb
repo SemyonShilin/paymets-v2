@@ -1,5 +1,10 @@
 <h2>Запишите год:</h2>
 
+<% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+<% end -%>
+
+
 <%= render 'form' %>
 
-<%= button_to 'Назад', years_path, method: :get %>
+<%= button_to 'Назад', root_path, method: :get %>

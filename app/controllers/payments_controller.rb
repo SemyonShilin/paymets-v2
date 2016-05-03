@@ -3,6 +3,7 @@ class PaymentsController < ApplicationController
 
   def index
     @payments = Payment.where(year: params[:year_id])
+    @sum_debit_behind_year = Payment.debit_behind_year(params[:year_id]).sum(:debit)
   end
 
   def new
@@ -18,6 +19,7 @@ class PaymentsController < ApplicationController
     if @payment.save
       redirect_to @month
     else
+      flash.now[:error] = 'Не могу создать платеж'
       render 'new'
     end
   end

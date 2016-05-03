@@ -1,5 +1,5 @@
 <table>
-  <%= form_for [@month, @payment] do |f| %>
+  <%= form_for [@month, @month.build_payment] do |f| %>
       <% if @payment.errors.any? %>
           <div>
             <h2>

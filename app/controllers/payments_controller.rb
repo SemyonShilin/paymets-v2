@@ -2,8 +2,8 @@ class PaymentsController < ApplicationController
   http_basic_authenticate_with name: 'olga', password: 't42ks31'
 
   def index
-    @payments = Payment.where(year: params[:year_id])
-    @sum_debit_behind_year = Payment.debit_behind_year(params[:year_id]).sum(:debit)
+    @payments = Payment.debit_behind_year(params[:year_id])
+    @sum_debit_behind_year = @payments.sum(:debit)
   end
 
   def new

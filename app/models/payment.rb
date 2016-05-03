@@ -1,6 +1,6 @@
 class Payment < ActiveRecord::Base
   belongs_to :month
-  scope :debit_behind_year, ->(year) {where('year == ?', year)}
+  scope :debit_behind_year, ->(y) {where('year == ?', y)}
 
   validates :payment, presence: true
   validates :payment, numericality: {greater_than_or_equal_to: 0.01,

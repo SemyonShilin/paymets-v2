@@ -1,6 +1,4 @@
-<div>
-  <%= form_for @year, url: years_path do |f| %>
-      <%= f.text_field :value_year %>
-      <%= f.submit 'Добавить год' %>
-  <% end %>
-</div>
+<%= form_for @year, url: years_path, html: {role: 'form', class: 'form-inline'} do |f| %>
+  <%= f.text_field :value_year %>
+  <%= f.submit 'Добавить год', class: 'btn btn-success' %>
+<% end %>

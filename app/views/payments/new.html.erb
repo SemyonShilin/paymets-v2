@@ -1,8 +1,8 @@
-<h2>Новый платеж</h2>
+<h3>Новый платеж</h3>
 
 <% flash.each do |name, msg| -%>
-    <%= content_tag :div, msg, class: name %>
+    <%= content_tag :div, msg, class: "alert alert-warning alert-#{name}" %>
 <% end -%>
 
-
 <%= render 'form' %>
+

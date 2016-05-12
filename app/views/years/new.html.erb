@@ -1,9 +1,11 @@
-<h2>Запишите год:</h2>
+<h3>Запишите год:</h3>
 
 <% flash.each do |name, msg| -%>
-    <%= content_tag :div, msg, class: name %>
+    <%= content_tag :div, msg, class: "alert alert-warning alert-#{name}" %>
 <% end -%>
 
 <%= render 'form' %>
 
-<%= button_to 'Назад', root_path, method: :get %>
+<%= button_to 'Назад', root_path, method: :get, class: 'btn btn-success' %>
+
+

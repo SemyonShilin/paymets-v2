@@ -4,4 +4,6 @@
       <dt><%= link_to month.name_month, new_month_payment_path(month.id) %></dt>
   <% end %>
 </dl>
-<%= button_to 'Назад', years_path, method: :get %>
+<%= button_to 'Назад', root_path, method: :get, class: 'btn btn-success' %>
+
+

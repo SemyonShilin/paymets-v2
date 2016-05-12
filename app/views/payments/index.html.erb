@@ -1,5 +1,5 @@
-<table cellspacing="10">
-  <tr>
+<table cellspacing="10" class="table">
+  <tr class="header">
     <th>Сумма платежа</th>
     <th>Сумма из долга</th>
     <th>Описание</th>
@@ -10,7 +10,7 @@
     <tr>
       <td><%= payment.payment %></td>
       <td><%= payment.other_payment %></td>
-      <td><%= payment.description %></td>
+      <td class="description"><%= payment.description %></td>
       <td><%= payment.debit %></td>
       <td><%= payment.month.name_month %></td>
     </tr>
@@ -21,4 +21,5 @@
   </tr>
 </table>
 
-<%= button_to 'На главную', root_path, method: :get %>
+<%= button_to 'На главную', root_path, method: :get, class: 'btn btn-success' %>
+

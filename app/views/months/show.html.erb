@@ -1,5 +1,5 @@
-<table>
-  <tr>
+<table class="table">
+  <tr class="header">
     <td><%= @month.name_month %>:</td>
     <td>Сумма: <%= @payment.payment %></td>
   </tr>
@@ -13,4 +13,5 @@
   </tr>
 </table>
 
-<%= link_to 'Выбор года', years_path %>
+<%= link_to 'Выбор года', years_path, class: 'btn btn-success' %>
+

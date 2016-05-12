@@ -1,19 +1,5 @@
-<table>
+<table class="table">
   <%= form_for [@month, @month.build_payment] do |f| %>
-      <% if @payment.errors.any? %>
-          <div>
-            <h2>
-              <%= pluralize(@payment.errors.count, 'error') %> prohibited
-              this article from being saved:
-            </h2>
-            <ul>
-              <% @payment.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-              <% end %>
-            </ul>
-          </div>
-      <% end %>
-
       <tr>
         <td><%= f.label 'Сумма платежа' %></td>
         <td><%= f.text_field :payment %></td>
@@ -27,7 +13,7 @@
         <td><%= f.text_field :description %></td>
       </tr>
       <tr>
-        <td colspan="2"><%= f.submit 'Добавить платеж' %></td>
+        <td colspan="2"><%= f.submit 'Добавить платеж', class: 'btn btn-success' %></td>
       </tr>
   <% end %>
 </table>

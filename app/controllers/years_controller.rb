@@ -3,16 +3,15 @@ class YearsController < ApplicationController
 
   def index
     @years = Year.order(:value_year)
+    @debit = Payment.sum(:debit)
   end
 
   def new
     @year = Year.new
-    #@month = @year.months.build
   end
 
   def create
     @year = Year.create(year_params)
-    #@month = @year.months.build(year_params)
     if @year.errors.empty?
       redirect_to root_path
     else

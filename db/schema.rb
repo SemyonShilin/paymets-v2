@@ -29,11 +29,11 @@ ActiveRecord::Schema.define(version: 20160428123242) do
 
   create_table "payments", force: :cascade do |t|
     t.decimal  "payment",       precision: 8, scale: 2
-    t.decimal  "other_payment", precision: 8, scale: 2
+    t.decimal  "other_payment", precision: 8, scale: 2, default: 0.0
     t.text     "description"
     t.integer  "month_id"
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
     t.integer  "year"
     t.decimal  "debit"
   end

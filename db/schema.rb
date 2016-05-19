@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428123242) do
+ActiveRecord::Schema.define(version: 20160519044029) do
 
   create_table "months", force: :cascade do |t|
     t.string   "name_month", null: false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20160428123242) do
     t.decimal  "payment",       precision: 8, scale: 2
     t.decimal  "other_payment", precision: 8, scale: 2, default: 0.0
     t.text     "description"
-    t.integer  "month_id"
+    t.integer  "month_id",                                            null: false
     t.datetime "created_at",                                          null: false
     t.datetime "updated_at",                                          null: false
     t.integer  "year"

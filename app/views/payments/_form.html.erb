@@ -1,5 +1,5 @@
 <table class="table">
-  <%= form_for [@month, @month.build_payment] do |f| %>
+  <%= form_for [@month, @payment], action: new_month_payment_path do |f| %>
       <tr>
         <td><%= f.label 'Сумма платежа' %></td>
         <td><%= f.text_field :payment %></td>

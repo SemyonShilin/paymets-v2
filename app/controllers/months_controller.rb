@@ -7,7 +7,7 @@ class MonthsController < ApplicationController
 
   def show
     @month = Month.find(params[:id])
-    @payment = @month.payment
+    @payment = @month.payments.last
     session[:current_year_id] = nil
   end
 

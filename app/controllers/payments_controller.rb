@@ -8,13 +8,13 @@ class PaymentsController < ApplicationController
 
   def new
     @month = Month.find(params[:month_id])
-    @payment = @month.build_payment
+    @payment = @month.payments.build
   end
 
   def create
     @month = Month.find(params[:month_id])
-    @payment = @month.create_payment(payments_params)
-    @month.payment.year = session[:current_year_id]
+    @payment = @month.payments.build(payments_params)
+    @payment.year = session[:current_year_id]
     if @payment.save
       redirect_to @month
     else

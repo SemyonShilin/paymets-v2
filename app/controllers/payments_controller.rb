@@ -1,5 +1,4 @@
 class PaymentsController < ApplicationController
-  http_basic_authenticate_with name: 'olga', password: 't42ks31'
 
   def index
     @payments = Payment.debit_behind_year(params[:year_id])

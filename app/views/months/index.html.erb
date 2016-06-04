@@ -1,5 +1,5 @@
 <h3>Создать новый платеж за:</h3>
-<dl>
+<dl id="size_month">
   <% @months.each do |month| %>
       <dt><%= link_to month.name_month, new_month_payment_path(month.id) %></dt>
   <% end %>

@@ -1,7 +1,7 @@
 <h3>Запишите год:</h3>
 
-<% flash.each do |name, msg| -%>
-    <%= content_tag :div, msg, class: "alert alert-warning alert-#{name}" %>
+<% flash.each do |name| -%>
+    <%= content_tag :div, 'Неподходящее значение года', class: "alert alert-danger alert-#{name}" %>
 <% end -%>
 
 <%= render 'form' %>

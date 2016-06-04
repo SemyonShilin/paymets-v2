@@ -1,5 +1,5 @@
 class YearsController < ApplicationController
-  http_basic_authenticate_with name: 'olga', password: 't42ks31'
+  #http_basic_authenticate_with name: 'olga', password: 't42ks31'
 
   def index
     @years = Year.order(:value_year)

@@ -24,4 +24,5 @@ class YearsController < ApplicationController
   def year_params
     params.require(:year).permit(:value_year)
   end
+
 end

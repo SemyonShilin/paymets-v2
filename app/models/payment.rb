@@ -2,6 +2,7 @@ class Payment < ActiveRecord::Base
   belongs_to :month, inverse_of: :payments
 
   scope :debit_behind_year, ->(y) {where(year: y)}
+  default_scope -> { order('month_id ASC') }
 
   before_create :set_debit
 

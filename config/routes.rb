@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users, except: [:new, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'years#index'
+  root 'sessions#new'
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/signin',  to: 'sessions#new',         via: 'get'
@@ -33,16 +33,14 @@ Rails.application.routes.draw do
   #     end
   #   end
 
-  resources :years , shallow: true, except: [:update, :edit, :destroy] do
-    resources :months, shallow: true, only: [:index, :show]
+  resources :years , shallow: true, except: [:update, :edit, :destroy, :show] do
+    resources :months, shallow: true, only: [:index]
     resources :payments, only: [:index]
   end
 
   resources :months, shallow: true, only: [:show, :index] do
-    resources :payments, except: [:edit, :update, :destroy]
+    resources :payments, except: [:edit, :update, :destroy, :show]
   end
-
-  match '/signup',  to: 'users#new', via: 'get'
 
   # Example resource route with sub-resources:
   #   resources :products do

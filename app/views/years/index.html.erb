@@ -12,11 +12,14 @@
     </td>
     <% end %>
   </tr>
-    <tr colspan="2">
-        <td><%= link_to 'Добавить год', new_year_path, class: 'btn btn-success' %></td>
-    </tr>
-    <tr>
-        <td><strong>Общая сумма долга:</strong></td>
-        <td><strong><%= @debit %></strong></td>
-    </tr>
+  <tr colspan="2">
+    <td>
+      <%= add_link_to_for_admin('Добавить год'){new_year_path} %>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Общая сумма долга:</strong></td>
+    <td><strong><%= @debit %></strong></td>
+  </tr>
 </table>
+

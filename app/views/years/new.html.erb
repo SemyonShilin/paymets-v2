@@ -1,9 +1,5 @@
 <h3>Запишите год:</h3>
 
-<% flash.each do |name| -%>
-    <%= content_tag :div, 'Неподходящее значение года', class: "alert alert-danger alert-#{name}" %>
-<% end -%>
-
 <%= render 'form' %>
 
 <%= button_to 'Назад', years_path, method: :get, class: 'btn btn-success' %>

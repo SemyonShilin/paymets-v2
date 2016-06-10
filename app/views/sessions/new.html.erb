@@ -1,12 +1,5 @@
 <h1>Вход</h1>
 
-<div class="center">
-    <% flash.each do |name, msg| -%>
-        <%= content_tag :div, msg,
-                        class: "alert alert-danger alert-#{name}" %>
-    <% end -%>
-</div>
-
 <div class="row center-bloc" id="margin-form">
     <table>
         <%= form_for(:session, url: sessions_path) do |f| %>

@@ -1,5 +1,4 @@
 class MonthsController < ApplicationController
-
   def index
     @months = Month.all
     session[:current_year_id] = params[:year_id]
@@ -12,5 +11,4 @@ class MonthsController < ApplicationController
     authorize @month
     session[:current_year_id] = nil
   end
-
 end

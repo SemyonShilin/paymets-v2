@@ -55,3 +55,6 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails', '~> 6.3'
 
 gem 'pundit', '~> 1.1'
+
+gem 'rubocop', '~> 0.40.0', require: false
+gem 'scss_lint', require: false

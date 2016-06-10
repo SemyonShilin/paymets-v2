@@ -1,5 +1,4 @@
 class YearsController < ApplicationController
-
   def index
     @years = Year.order(:value_year)
     @debit = Payment.sum(:debit)
@@ -21,8 +20,8 @@ class YearsController < ApplicationController
   end
 
   private
+
   def year_params
     params.require(:year).permit(:value_year)
   end
-
 end

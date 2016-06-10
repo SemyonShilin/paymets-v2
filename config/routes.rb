@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   #     end
   #   end
 
-  resources :years , shallow: true, except: [:update, :edit, :destroy, :show] do
+  resources :years, shallow: true, except: [:update, :edit, :destroy, :show] do
     resources :months, shallow: true, only: [:index]
     resources :payments, only: [:index]
   end

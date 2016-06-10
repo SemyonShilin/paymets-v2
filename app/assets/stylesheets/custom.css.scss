@@ -1,123 +1,135 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+$color-border: #eaeaea;
+$color: #999;
+$color-in-logo: #fff;
 
 footer {
-    margin-top: 45px;
-    padding-top: 5px;
-    border-top: 1px solid #eaeaea;
-    color: #999;
-    a {
-        color: #555;
-        &:hover {
-            color: #222;
-        }
-    }
-    small {
-        float: left;
-    }
+  border-top: 1px solid $color-border;
+  color: $color;
+  margin-top: 45px;
+  padding-top: 5px;
 
+  a {
+    color: #555;
+
+    &:hover {
+      color: #222;
+    }
+  }
+
+  small {
+    float: left;
+  }
 }
 
 html {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 
 body {
-    padding-top: 60px;
+  padding-top: 60px;
 }
 
 section {
-    overflow: auto;
+  overflow: auto;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 .center {
-    text-align: center;
-    h1 {
-        margin-bottom: 10px;
-    }
+  text-align: center;
+
+  h1 {
+    margin-bottom: 10px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    line-height: 1;
+  line-height: 1;
 }
 
 h1 {
-    font-size: 3em;
-    letter-spacing: -2px;
-    margin-bottom: 30px;
-    text-align: center;
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 h2 {
-    font-size: 1.2em;
-    letter-spacing: -1px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-weight: normal;
-    color: #999;
+  color: $color;
+  font-size: 1.2em;
+  font-weight: normal;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 #logo {
-    float: left;
-    margin-right: 10px;
-    font-size: 1.7em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    padding-top: 9px;
-    font-weight: bold;
-    line-height: 1;
+  color: $color-in-logo;
+  float: left;
+  font-size: 1.7em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-right: 10px;
+  padding-top: 9px;
+  text-transform: uppercase;
 
-    &:hover {
-        color: #fff;
-        text-decoration: none;
-    }
+  &:hover {
+    color: $color-in-logo;
+    text-decoration: none;
+  }
 }
 
 header {
-    padding-top: 5px;
-    border-top: 1px solid #eaeaea;
-    color: #999;
+  border-top: 1px solid $color-border;
+  color: $color;
+  padding-top: 5px;
 
-    a:hover {
-        color: #222;
+  a:hover {
+    color: #222;
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 10px;
     }
-
-    ul {
-        float: right;
-        list-style: none;
-
-        li {
-            float: left;
-            margin-left: 10px;
-        }
-    }
+  }
 }
 
-@mixin box_sizing {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+@mixin box-sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 input, textarea, select {
-    border: 1px solid #bbb;
-    margin-bottom: 15px;
-    @include box_sizing;
+  @include box-sizing;
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
 }
 
-#margin_form {
-    margin-left: 37%;
+#margin-form {
+  position: relative;
+  margin-left: 37%;
 }
 
-#size_year {
-    font-size: 200%;
+#size-year {
+  font-size: 200%;
 }
 
-#size_month {
-    font-size: 150%;
+#size-month {
+  font-size: 150%;
+}
+
+table {
+  position: relative;
 }

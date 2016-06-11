@@ -7,11 +7,9 @@ class Payment < ActiveRecord::Base
   before_create :set_debit
 
   validates :payment, presence: true
-  validates :payment, numericality: { greater_than_or_equal_to: 0.01,
-                                      message: 'Сумма платежа не может быть отрицательным' }
+  validates :payment, numericality: { greater_than_or_equal_to: 0.01 }
   validates :other_payment,
-            numericality: { greater_than_or_equal_to: 0,
-                            message: 'Сумма платежа не может быть отрицательным' },
+            numericality: { greater_than_or_equal_to: 0 },
             unless: proc { |a| a.other_payment.blank? }
 
   private

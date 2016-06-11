@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_back_or user
     else
-      flash[:error] = 'Неправильный email или пароль'
+      flash[:alert] = 'Неправильный логин или пароль'
       render 'new'
     end
   end

@@ -3,6 +3,7 @@
 <div class="row center-bloc" id="margin_form">
     <table>
         <%= form_for(@user) do |f| %>
+          <%= render 'shared/error_messages', obj: @user %>
             <tr>
                 <td><%= f.label :name, 'Имя' %></td>
                 <td><%= f.text_field :name %></td>

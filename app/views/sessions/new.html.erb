@@ -1,5 +1,8 @@
 <h1>Вход</h1>
 
+<% if flash[:alert] %>
+    <p class="alert-danger center"><%= flash[:alert] %></p>
+<% end %>
 <div class="row center-bloc" id="margin-form">
     <table>
         <%= form_for(:session, url: sessions_path) do |f| %>

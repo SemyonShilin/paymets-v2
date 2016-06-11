@@ -14,7 +14,6 @@ class YearsController < ApplicationController
     if @year.errors.empty?
       redirect_to years_path
     else
-      flash.now[:error] = 'Не могу добавить год'
       render 'new'
     end
   end

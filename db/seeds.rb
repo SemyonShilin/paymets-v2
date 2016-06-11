@@ -11,14 +11,14 @@ name = %w(Январь Февраль Март Апрель Май Июнь
 
 Month.delete_all
 Month.create!([{ name_month: name[0] },
-             { name_month: name[1] },
-             { name_month: name[2] },
-             { name_month: name[3] },
-             { name_month: name[4] },
-             { name_month: name[5] },
-             { name_month: name[6] },
-             { name_month: name[7] },
-             { name_month: name[8] },
-             { name_month: name[9] },
-             { name_month: name[10] },
-             { name_month: name[11] }])
+               { name_month: name[1] },
+               { name_month: name[2] },
+               { name_month: name[3] },
+               { name_month: name[4] },
+               { name_month: name[5] },
+               { name_month: name[6] },
+               { name_month: name[7] },
+               { name_month: name[8] },
+               { name_month: name[9] },
+               { name_month: name[10] },
+               { name_month: name[11] }])

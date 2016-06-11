@@ -17,7 +17,6 @@ class PaymentsController < ApplicationController
     if @payment.save
       redirect_to @month
     else
-      flash.now[:error] = 'Не могу создать платеж'
       render 'new'
     end
   end

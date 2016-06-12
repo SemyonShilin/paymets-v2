@@ -1,7 +1,5 @@
 <%= form_for @year, url: years_path, html: {role: 'form', class: 'form-inline'} do |f| %>
   <%= render 'shared/error_messages', obj: @year %>
-  <div>
-    <%= f.text_field :value_year %>
-    <%= f.submit 'Добавить год', class: 'btn btn-success' %>
-  </div>
+  <%= f.text_field :value_year %>
+  <%= f.submit 'Добавить год', class: 'btn btn-success' %>
 <% end %>

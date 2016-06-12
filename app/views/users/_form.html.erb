@@ -1,0 +1,22 @@
+<%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages', obj: @user %>
+    <tr>
+      <td><%= f.label :name, 'Имя' %></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :email %></td>
+      <td><%= f.text_field :email %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :password, 'Пароль' %></td>
+      <td><%= f.password_field :password %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :password_confirmation, 'Подтверждение пароля' %></td>
+      <td><%= f.password_field :password_confirmation %></td>
+    </tr>
+    <tr>
+      <td><%= f.submit 'Сохранить изменения', class: 'btn btn-large btn-primary' %></td>
+    </tr>
+<% end %>

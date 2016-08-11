@@ -11,7 +11,7 @@ class YearsController < ApplicationController
 
   def create
     @year = Year.create(year_params)
-    if @year.errors.empty?
+    if @year.save
       redirect_to years_path
     else
       render 'new'

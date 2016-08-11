@@ -24,6 +24,7 @@ module PaymetsV2
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     config.assets.compile = true
+    Rails.application.config.assets.compress = true
     config.i18n.default_locale = :ru
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
   end

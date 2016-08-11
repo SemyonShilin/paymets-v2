@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.0'
+# ruby '2.2.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -35,9 +35,8 @@ gem 'bcrypt', '~> 3.1.11'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
 
+  gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -47,7 +46,7 @@ end
 
 
 group :production do
-  gem 'pg', '0.15.1'
+  gem 'pg', '0.18.4'
   gem 'rails_12factor', '0.0.2'
 end
 
@@ -58,3 +57,7 @@ gem 'pundit', '~> 1.1'
 
 gem 'rubocop', '~> 0.40.0', require: false
 gem 'scss_lint', require: false
+
+gem 'jquery-ui-rails'
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]

@@ -1,25 +1,29 @@
-<table cellspacing="10" class="table">
-  <tr class="header">
-    <th>Сумма платежа</th>
-    <th>Сумма из долга</th>
-    <th>Описание</th>
-    <th>Долг</th>
-    <th>Месяц</th>
-  </tr>
-  <% @payments.each do |payment| %>
-    <tr>
-      <td><%= payment.payment %></td>
-      <td><%= payment.other_payment %></td>
-      <td class="description"><%= payment.description %></td>
-      <td><%= payment.debit %></td>
-      <td><%= payment.month.name_month %></td>
-    </tr>
-  <% end %>
-  <tr>
-    <td colspan="3">Сумма:</td>
-    <td colspan="2"><%= @sum_debit_behind_year %></td>
-  </tr>
-</table>
+<div class="row center size-and-margin-bottom">
+  <div class="col-lg-2 col-xs-2">Сумма платежа</div>
+  <div class="col-lg-2 col-xs-2">Сумма из долга</div>
+  <div class="col-lg-4 col-xs-4">Описание</div>
+  <div class="col-lg-2 col-xs-2">Долг</div>
+  <div class="col-lg-2 col-xs-2">Месяц</div>
+</div>
 
-<%= button_to 'На главную', years_path, method: :get, class: 'btn btn-success' %>
+<% @payments.each do |payment| %>
+    <div class="row center index-pay">
+      <div class="col-lg-2 col-xs-2"><%= payment.payment %></div>
+      <div class="col-lg-2 col-xs-2"><%= payment.other_payment %></div>
+      <div class="col-lg-4 col-xs-4 description"><%= payment.description %></div>
+      <div class="col-lg-2 col-xs-2"><%= payment.debit %></div>
+      <div class="col-lg-2 col-xs-2"><%= payment.month.name_month %></div>
+    </div>
+<% end %>
 
+<div class="row center" style="margin-bottom: 10px;">
+  <div class="col-lg-2 col-xs-2"><strong>Сумма:</strong></div>
+  <div class="col-lg-6 col-lg-offset-4 col-xs-6 col-xs-offset-4"><%= @sum_debit_behind_year %></div>
+</div>
+
+<div class="row center">
+  <div class="col-lg-2 col-xs-2">
+    <%= button_to 'На главную', years_path, method: :get, class: 'btn btn-success' %>
+  </div>
+  <div class="col-lg-10 col-xs-10"></div>
+</div>

@@ -1,17 +1,38 @@
-<table class="table" id="size_month">
-  <tr class="header">
-    <td><%= @month.name_month %>:</td>
-    <td>Сумма: <%= @payment.payment %></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td colspan="2">Прочие расходы: <%= @payment.other_payment %></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td colspan="2">Описание: <%= @payment.description %></td>
-  </tr>
-</table>
+<div class="row center margin-bottom">
+  <div class="col-lg-12 col-xs-12">
+    <h4><strong><%= @month.name_month %></strong></h4>
+  </div>
+</div>
 
-<%= link_to 'Выбор года', years_path, class: 'btn btn-success' %>
+<div class="row center size-and-margin-bottom">
+  <div class="col-lg-6 col-xs-6">
+    <div>Сумма:</div>
+  </div>
+  <div class="col-lg-6 col-xs-6">
+    <div><%= @payment.payment %></div>
+  </div>
+</div>
 
+<div class="row center size-and-margin-bottom">
+  <div class="col-lg-6 col-xs-6">
+    <div>Прочие расходы:</div>
+  </div>
+  <div class="col-lg-6 col-xs-6">
+    <div><%= @payment.other_payment %></div>
+  </div>
+</div>
+
+<div class="row center size-and-margin-bottom">
+  <div class="col-lg-6 col-xs-6">
+    <div>Описание:</div>
+  </div>
+  <div class="col-lg-6 col-xs-6">
+    <div><%= @payment.description %></div>
+  </div>
+</div>
+
+<div class="row center">
+  <div class="col-lg-6 col-xs-6">
+    <%= link_to 'Выбор года', years_path, class: 'btn btn-success' %>
+  </div>
+</div>

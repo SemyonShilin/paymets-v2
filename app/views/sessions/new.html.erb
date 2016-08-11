@@ -1,22 +1,10 @@
 <h1>Вход</h1>
 
 <% if flash[:alert] %>
-    <p class="alert-danger center"><%= flash[:alert] %></p>
+  <p class="alert-danger center"><%= flash[:alert] %></p>
 <% end %>
 <div class="row center-bloc" id="margin-form">
-    <table>
-        <%= form_for(:session, url: sessions_path) do |f| %>
-            <tr>
-                <td><%= f.label :email %></td>
-                <td><%= f.text_field :email %></td>
-            </tr>
-            <tr>
-                <td><%= f.label :password, 'Пароль' %></td>
-                <td><%= f.password_field :password %></td>
-            </tr>
-            <tr>
-                <td><%= f.submit 'Войти', class: "btn btn-large btn-primary" %></td>
-            </tr>
-        <% end %>
-    </table>
+  <table>
+    <%= render 'form' %>
+  </table>
 </div>
